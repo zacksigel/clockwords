@@ -1,0 +1,268 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 65vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.speed-buttons {
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
+.speed-buttons button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.1s;
+}
+.speed-buttons button:hover {
+  border-color: #646cff;
+}
+.speed-buttons button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.speed-buttons button.active {
+  background-color: #646cff;
+}
+
+
+.word-of-the-day-row {
+  margin-top: 20px;
+}
+
+.word-of-the-day-letter {
+  display: inline-block;
+  font-size: 30px;
+  padding-left: 5px;
+  text-decoration: underline;
+  position: absolute;
+}
+
+.keyboard {
+  color: lightblue;
+  position: relative;
+  margin-top: 535px;;
+  display: inline-block;
+  margin-left: -200px;
+  width: 200%;
+  font-size: 30px;
+}
+
+.keyboard-letter {
+  display: inline-block;
+  margin: 3px;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+
+
+.keyboard-letter button {
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  transition: border-color 0.1s;
+}
+
+.keyboard-letter button:hover:enabled {
+  border-color: #646cff;
+  background-color: #646cff;
+  cursor: pointer;
+}
+
+.letter-input {
+  border: none;
+  border-bottom: 3px solid whitesmoke;
+  margin-top: 15px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.shake {
+  animation: shake 0.2s;
+  box-shadow: 0px 0px 0px 8px rgb(243, 2, 2,0.3); 
+}
+
+.fade-in {
+  animation: fadeIn 0.07s forwards, fadeOutBg 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutBg {
+  from {
+    background-color: whitesmoke;
+    opacity: 50%
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+
+.new-points {
+  color: green;
+  font-size: 12px;
+  vertical-align: middle;
+  background-color: gold;
+  position: absolute;
+  right: 205px;
+  top: 30px;
+}
+
+.submitted-or-not-label {
+  color: whitesmoke;
+  font-size: 12px;
+  width: 30%;
+  margin-left: 283px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.already-submitted {
+  visibility: visible;
+}
+
+.not-submitted {
+  visibility: hidden;
+}
+
+/* .score-container {
+  margin-top: -450px;
+  margin-left: 600px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  color: whitesmoke;
+  font-weight: 500;
+  min-height: 500px;
+  gap: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: green;
+} */
+
+.guessed-words-container {
+  /* top: 100px; */
+  /* right: 300px; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+  text-align: left;
+  color: whitesmoke;
+  font-weight: 500;
+  min-height: 500px;
+  border-left: 2px solid whitesmoke;
+  top: 100px;
+  right: 200px;
+}
+
+.guessed-words {
+  padding-left: 20px;
+}
+
+.guessed-words-header {
+  padding-left: 20px;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
